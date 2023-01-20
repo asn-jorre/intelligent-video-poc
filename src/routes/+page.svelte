@@ -3,7 +3,8 @@
 	import { onMount } from 'svelte';
 	import * as Animation from '../libs/Animation';
 
-	let text = 'Sample text';
+	let text = 'Een nieuwe wereld gaat voor je open';
+	let model = 'Galaxy Flip 4';
 
 	let videoIsplaying = false;
 
@@ -40,14 +41,29 @@
 <div class="main">
 	<div id="contentWrapper">
 		<div id="animationWrapper">
-			<span id="testBlock" class="testBlock" /> <br />
-			<!-- <span class="testText">test text</span> -->
+			<div class="frame frame1">
+							<div class="logo">
+				<img class="logo_img" src="img/logo_b.png" alt="logo" />
+			</div>
+			<input
+				type="text"
+				class="model {videoIsplaying === true ? 'playing' : ''}"
+				placeholder="sample text"
+				bind:value={model}
+			/>
+			<div class="promo_bol">
+				<div class="small small_top">Nu tot</div>
+				<div class="big">- € 400</div>
+				<div class="small small_bot">cashback</div>
+			</div>
+
 			<input
 				type="text"
 				class="testText {videoIsplaying === true ? 'playing' : ''}"
 				placeholder="sample text"
 				bind:value={text}
 			/>
+			</div>
 		</div>
 		<video src="/flip4_.mp4" kind="captions" id="video" controls>
 			<track kind="captions" />

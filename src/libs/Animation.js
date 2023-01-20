@@ -14,29 +14,19 @@ let tlComplate = function () {
 export function initAnimation(animationWraper) {
 	tl = gsap.timeline({ onComplete: tlComplate, paused: true });
 
-	tl.to(
-		'.testBlock',
-		{
-			duration: tl_duration,
-			x: () => animationWraper.offsetWidth,
-			xPercent: -80, // offset by the width of the box
-			rotation: 360,
-			ease: 'none',
-			paused: false
-		},
-		0
-	).to(
+	tl.from(
 		'.testText',
 		{
-			duration: tl_duration,
-			x: () => animationWraper.offsetWidth,
-			xPercent: -120,
-			rotation: 360,
+			duration: 1,
 			ease: 'none',
-			paused: false
+			paused: false,
+			opacity: 0,
 		},
 		0
-	);
+	),
+	tl.to(".logo", { opacity: 1, ease: "power2.out", duration: 1 }, "<");
+	tl.to(".model", { opacity: 1, ease: "power2.out", duration: 1 }, "<");
+	tl.to(".promo_bol", { opacity: 1, ease: "power3.out"}, "<");
 }
 
 // export function startAnimation() {
