@@ -2,7 +2,7 @@ import { gsap } from 'gsap';
 
 let tl;
 
-let tl_duration = 20;
+let tl_duration = 15;
 
 let tlFinished = false;
 
@@ -28,9 +28,10 @@ export function initAnimation(animationWraper) {
 	tl.to(".model", { opacity: 1, ease: "power2.out", duration: 1 }, "<");
 	tl.to(".promo_bol", { opacity: 1, ease: "power3.out"}, "<");
 	tl.to(".frame1", {opacity: 0, delay: 9})
+	tl.to(".frame1", {x: "100%"})
 
 
-	tl.to(".right", { x: 0, ease: "power2.out", duration: 0.5}, "<+1");
+	tl.to(".right", { x: 0, ease: "power2.out", duration: 0.5});
 	tl.to(".left", { x: 0, ease: "power2.out", duration: 0.5 }, "<+0.2");
 	tl.from(".product", { opacity: 0, ease: "power2.out", duration: 1 });
 	tl.from(

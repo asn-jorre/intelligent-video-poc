@@ -8,9 +8,8 @@
 
 	let text = 'Een nieuwe wereld gaat voor je open';
 	let model = 'Galaxy Flip 4';
-	let info =
-		'Snel meldingen zien, oproepen beantwoorden en meer zonder het toestel zelfs maar te openen';
-	let promo = '- 400 €';
+	let info = 'Snel meldingen zien, oproepen beantwoorden en meer zonder het toestel zelfs maar te openen';
+	// let promo = '- 400 €';
 	let cta = 'Ontdek meer';
 
 	let videoIsplaying = true;
