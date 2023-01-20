@@ -68,12 +68,15 @@
 					<div class="big">- € 400</div>
 					<div class="small small_bot">cashback</div>
 				</div>
-				<input
-					type="text"
-					class="testText {videoIsplaying === true ? 'playing' : ''}"
-					placeholder="sample text"
-					bind:value={text}
-				/>
+
+				{#if $copyOverLayVisibible}
+					<input
+						type="text"
+						class="testText {videoIsplaying === true ? 'playing' : ''}"
+						placeholder="sample text"
+						bind:value={text}
+					/>
+				{/if}
 			</div>
 			<div class="frame frame2">
 				<div class="left">
