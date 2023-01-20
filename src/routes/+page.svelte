@@ -4,11 +4,17 @@
 	import * as Animation from '../libs/Animation';
 	import { getContext, setContext } from 'svelte';
 
-	import { mainCopyVisible } from '../stores/controlPanel.store';
+	import {
+		mainCopyVisible,
+		logoVisible,
+		modelCopyVisible,
+		promoBolVisible
+	} from '../stores/controlPanel.store';
 
 	let text = 'Een nieuwe wereld gaat voor je open';
 	let model = 'Galaxy Flip 4';
-	let info = 'Snel meldingen zien, oproepen beantwoorden en meer zonder het toestel zelfs maar te openen';
+	let info =
+		'Snel meldingen zien, oproepen beantwoorden en meer zonder het toestel zelfs maar te openen';
 	// let promo = '- 400 €';
 	let cta = 'Ontdek meer';
 
@@ -53,35 +59,32 @@
 	<div id="contentWrapper">
 		<div id="animationWrapper">
 			<div class="frame frame1">
-				<div class="logo">
+				<div class="logo {$logoVisible === false ? 'hidden' : ''}">
 					<img class="logo_img" src="img/logo_b.png" alt="logo" />
 				</div>
+
 				<input
 					type="text"
-					class="model {videoIsplaying === true ? 'playing' : ''}"
+					class="model {videoIsplaying === true ? 'playing' : ''} {$modelCopyVisible === false
+						? 'hidden'
+						: ''}"
 					placeholder="sample text"
 					bind:value={model}
 				/>
-				<div class="promo_bol">
+				<div class="promo_bol {$promoBolVisible === false ? 'hidden' : ''}">
 					<div class="small small_top">Nu tot</div>
 					<div class="big">- € 400</div>
 					<div class="small small_bot">cashback</div>
 				</div>
 
-				{#if $mainCopyVisible}
-					<!-- <input
-						type="text"
-						class="testText {videoIsplaying === true ? 'playing' : ''}"
-						placeholder="sample text"
-						bind:value={text}
-					/> -->
-					<textarea
-						type="text"
-						class="testText {videoIsplaying === true ? 'playing' : ''}"
-						placeholder="sample text"
-						bind:value={text}
-					/>
-				{/if}
+				<input
+					type="text"
+					class="testText {$mainCopyVisible === false ? 'hidden' : ''} {videoIsplaying === true
+						? 'playing'
+						: ''}"
+					placeholder="sample text"
+					bind:value={text}
+				/>
 			</div>
 			<div class="frame frame2">
 				<div class="left">
