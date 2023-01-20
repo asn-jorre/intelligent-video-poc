@@ -8,6 +8,10 @@
 
 	let text = 'Een nieuwe wereld gaat voor je open';
 	let model = 'Galaxy Flip 4';
+	let info =
+		'Snel meldingen zien, oproepen beantwoorden en meer zonder het toestel zelfs maar te openen';
+	let promo = '- 400 €';
+	let cta = 'Ontdek meer';
 
 	let videoIsplaying = true;
 
@@ -64,7 +68,6 @@
 					<div class="big">- € 400</div>
 					<div class="small small_bot">cashback</div>
 				</div>
-
 				<input
 					type="text"
 					class="testText {videoIsplaying === true ? 'playing' : ''}"
@@ -78,7 +81,14 @@
 				</div>
 				<div class="right">
 					<div class="visual">
-						<div class="product">Galaxy Flip 4</div>
+						<div class="product">
+							<input
+								type="text"
+								class="model {videoIsplaying === true ? 'playing' : ''}"
+								placeholder="sample text"
+								bind:value={model}
+							/>
+						</div>
 						<div class="image_container">
 							<div class="image">
 								<img id="phone1" class="phone1" src="img/phone1.png" alt="phone1" />
@@ -86,13 +96,22 @@
 							</div>
 						</div>
 						<div class="text_container">
-							<p class="info">
-								Snel meldingen zien, oproepen beantwoorden en meer zonder het toestel zelfs maar te
-								openen
-							</p>
+							<input
+								type="text"
+								class="info {videoIsplaying === true ? 'playing' : ''}"
+								placeholder="sample text"
+								bind:value={info}
+							/>
 							<div class="bottom">
 								<div class="cta_button">
-									<span class="cta_span">Ontdek meer</span>
+									<span class="cta_span">
+										<input
+											type="text"
+											class="cta_span_ {videoIsplaying === true ? 'playing' : ''}"
+											placeholder="sample text"
+											bind:value={cta}
+										/>
+									</span>
 									<img src="/img/arrow_w.png" alt="arrow" />
 								</div>
 							</div>
