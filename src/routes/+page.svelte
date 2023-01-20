@@ -2,11 +2,19 @@
 	import './page.scss';
 	import { onMount } from 'svelte';
 	import * as Animation from '../libs/Animation';
+	import { getContext, setContext } from 'svelte';
+
+	import { copyOverLayVisibible } from '../stores/controlPanel.store';
 
 	let text = 'Een nieuwe wereld gaat voor je open';
 	let model = 'Galaxy Flip 4';
 
-	let videoIsplaying = false;
+	let videoIsplaying = true;
+
+	// kan uncommented worden indien er een event nodig is uit de controlPanel store
+	// copyOverLayVisibible.subscribe((value) => {
+	// 	console.log('V: ' + value);
+	// });
 
 	onMount(async () => {
 		let vid = document.getElementById('video');
@@ -78,14 +86,16 @@
 							</div>
 						</div>
 						<div class="text_container">
-							<p class="info">Snel meldingen zien, oproepen beantwoorden
-                  en meer zonder het toestel zelfs maar te openen</p>
-						<div class="bottom">
-							<div class="cta_button">
-								<span class="cta_span">Ontdek meer</span>
-								                    <img src="/img/arrow_w.png" alt="arrow">
+							<p class="info">
+								Snel meldingen zien, oproepen beantwoorden en meer zonder het toestel zelfs maar te
+								openen
+							</p>
+							<div class="bottom">
+								<div class="cta_button">
+									<span class="cta_span">Ontdek meer</span>
+									<img src="/img/arrow_w.png" alt="arrow" />
+								</div>
 							</div>
-						</div>
 						</div>
 					</div>
 				</div>
