@@ -49,7 +49,7 @@
 				bind:value={text}
 			/>
 		</div>
-		<video src="/vid.mp4" kind="captions" id="video" controls>
+		<video src="/flip4_.mp4" kind="captions" id="video" controls>
 			<track kind="captions" />
 		</video>
 	</div>
