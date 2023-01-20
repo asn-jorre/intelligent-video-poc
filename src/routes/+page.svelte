@@ -70,7 +70,13 @@
 				</div>
 
 				{#if $mainCopyVisible}
-					<input
+					<!-- <input
+						type="text"
+						class="testText {videoIsplaying === true ? 'playing' : ''}"
+						placeholder="sample text"
+						bind:value={text}
+					/> -->
+					<textarea
 						type="text"
 						class="testText {videoIsplaying === true ? 'playing' : ''}"
 						placeholder="sample text"
@@ -99,7 +105,13 @@
 							</div>
 						</div>
 						<div class="text_container">
-							<input
+							<!-- <input
+								type="text"
+								class="info {videoIsplaying === true ? 'playing' : ''}"
+								placeholder="sample text"
+								bind:value={info}
+							/> -->
+							<textarea
 								type="text"
 								class="info {videoIsplaying === true ? 'playing' : ''}"
 								placeholder="sample text"

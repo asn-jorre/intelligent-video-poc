@@ -27,10 +27,10 @@ export function initAnimation(animationWraper) {
 	tl.to(".logo", { opacity: 1, ease: "power2.out", duration: 1 }, "<");
 	tl.to(".model", { opacity: 1, ease: "power2.out", duration: 1 }, "<");
 	tl.to(".promo_bol", { opacity: 1, ease: "power3.out"}, "<");
-	tl.to(".frame1", {opacity: 0, delay: 8})
+	tl.to(".frame1", {opacity: 0, delay: 9})
 
 
-	tl.to(".right", { x: 0, ease: "power2.out", duration: 0.5}, "<+2");
+	tl.to(".right", { x: 0, ease: "power2.out", duration: 0.5}, "<+1");
 	tl.to(".left", { x: 0, ease: "power2.out", duration: 0.5 }, "<+0.2");
 	tl.from(".product", { opacity: 0, ease: "power2.out", duration: 1 });
 	tl.from(

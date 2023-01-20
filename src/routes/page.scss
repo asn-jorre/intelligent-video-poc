@@ -159,21 +159,17 @@
 						margin: 0 !important;
 						margin-top: 3.5vh;
 						display: inline-block;
+						color: white;
+						font-size: 3vw;
+						height: 3.5vw;
+						width: 10.7vw;
+						max-width: 11.5vw;
+						// margin-left: 0.26vw;
+						// margin-right: 0.26vw;
 
-						input {
-
-							color: white;
-							font-size: 3vw;
-							height: 3.5vw;
-							width: 10.7vw;
-							max-width: 11.5vw;
-							// margin-left: 0.26vw;
-							// margin-right: 0.26vw;
-
-							white-space: nowrap;
-							-webkit-font-smoothing: antialiased;
-							-moz-osx-font-smoothing: grayscale;
-						}
+						white-space: nowrap;
+						-webkit-font-smoothing: antialiased;
+						-moz-osx-font-smoothing: grayscale;
 					}
 
 					.small_top {
@@ -255,7 +251,7 @@
 						.product {
 							input {
 								font-family: SamsungSharpSans;
-								text-align: left;
+								text-align: center;
 								width: 100%;
 								font-size: 4.2vw;
 								margin-top: 4%;
@@ -329,12 +325,11 @@
 								overflow-wrap: break-word;
 								-webkit-font-smoothing: antialiased;
 								-moz-osx-font-smoothing: grayscale;
-
-								&.playing {
-									border: 0 !important;
-								}
 							}
 
+																														.playing {
+																															border: 0 !important;
+																														}
 							.bottom {
 								display: flex;
 								flex-direction: row;
