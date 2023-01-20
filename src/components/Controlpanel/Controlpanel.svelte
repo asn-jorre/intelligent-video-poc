@@ -1,10 +1,10 @@
 <script>
 	import './Controlpanel.scss';
 
-	import { copyOverLayVisibible } from '../../stores/controlPanel.store';
+	import { mainCopyVisible } from '../../stores/controlPanel.store';
 
 	let toggleCopy = function () {
-		copyOverLayVisibible.update((n) => !n);
+		mainCopyVisible.update((n) => !n);
 	};
 </script>
 

@@ -4,7 +4,7 @@
 	import * as Animation from '../libs/Animation';
 	import { getContext, setContext } from 'svelte';
 
-	import { copyOverLayVisibible } from '../stores/controlPanel.store';
+	import { mainCopyVisible } from '../stores/controlPanel.store';
 
 	let text = 'Een nieuwe wereld gaat voor je open';
 	let model = 'Galaxy Flip 4';
@@ -16,7 +16,7 @@
 	let videoIsplaying = true;
 
 	// kan uncommented worden indien er een event nodig is uit de controlPanel store
-	// copyOverLayVisibible.subscribe((value) => {
+	// mainCopyVisible.subscribe((value) => {
 	// 	console.log('V: ' + value);
 	// });
 
@@ -69,7 +69,7 @@
 					<div class="small small_bot">cashback</div>
 				</div>
 
-				{#if $copyOverLayVisibible}
+				{#if $mainCopyVisible}
 					<input
 						type="text"
 						class="testText {videoIsplaying === true ? 'playing' : ''}"
