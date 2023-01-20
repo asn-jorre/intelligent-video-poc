@@ -1,8 +1,31 @@
 .panel {
 	min-height: 100vh;
 	background-color: #160f30;
-
+	border: 1px solid red;
+	padding: 10px;
+		.ASNlogo {
+				border: 1px solid red;
+				max-width: 15vw;
+				img{
+					object-fit: contain;
+					width: 100%;
+				}
+				.sub{
+					display: flex;
+					align-items: center;
+					span{
+						width: 3vw;
+						height:2px;
+						background-color: #5FFFE2;
+						margin-right: 0.3vw;
+					}
+					p{
+						font-weight: lighter;
+					}
+				}
+			}
 	p {
 		color: #fff;
 	}
+
 }
