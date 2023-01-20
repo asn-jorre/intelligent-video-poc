@@ -42,116 +42,299 @@
 			// background-color: rgba($color: #004400, $alpha: 0.7);
 			pointer-events: none;
 
-
-			.logo,
-			.model,
 			.cta,
-			.cta_full {
-				position: absolute;
-				z-index: 50;
-				text-align: center;
-			}
+			.cta_button {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				background-color: black;
+				color: white;
+				border-radius: 10.1vw;
+				right: 1.7%;
+				bottom: 3.3%;
+				padding: 1% 1.5%;
+				height: 1.6vw;
 
-			.logo {
-				opacity: 0;
-				left: 2.1%;
-				top: 3.5%;
+				span {
+					padding-top: 0.3vw;
+					display: flex;
+					font-size: 1vw;
+					line-height: 1.6vw;
+					margin: 0;
+					vertical-align: middle;
+					-webkit-font-smoothing: antialiased;
+					-moz-osx-font-smoothing: grayscale;
+				}
 
 				img {
-					height: 2vw;
+					padding-left: 0.9vw;
+					height: 1vw;
+					width: auto;
 				}
 			}
 
-			.model {
-				opacity: 0;
-				right: 1.7%;
-				top: 3.3%;
-				font-size: 2.75vw;
-				-webkit-font-smoothing: antialiased;
-				-moz-osx-font-smoothing: grayscale;
-				background-color: transparent;
-				pointer-events: auto;
-				display: inline-block;
-			}
-
-			.promo_bol,
-			.promo_bol2 {
-				opacity: 0;
+			.frame {
+				//background-color: lightgray;
 				position: absolute;
-				z-index: 110;
-				background-color: #0077c8;
-				width: 12.2vw;
-				height: 12.2vw;
-				border-radius: 10vw;
-				right: 2.3%;
-				bottom: 8.8%;
+				height: 100%;
+				width: 100%;
 				display: flex;
-				flex-direction: column;
 				justify-content: center;
-				// align-items: center;
-				padding: 1vw;
-				text-align: center;
+				align-items: center;
+			}
 
-				.small {
-					font-family: SamsungOne;
-					font-weight: 450C;
-					color: white;
-					font-size: 1.5vw;
-					letter-spacing: 0.2;
-					-webkit-font-smoothing: antialiased;
-					-moz-osx-font-smoothing: grayscale;
-					margin: 0 !important;
+			.frame1 {
+				// display: none;
+				z-index: 20;
+
+				.logo,
+				.model,
+				.cta,
+				.cta_full {
+					position: absolute;
+					z-index: 50;
+					text-align: center;
 				}
 
-				.big {
+				.logo {
+					opacity: 0;
+					left: 2.1%;
+					top: 3.5%;
+
+					img {
+						height: 2vw;
+					}
+				}
+
+				.model {
+					opacity: 0;
+					right: 1.7%;
+					top: 3.3%;
+					font-size: 2.75vw;
+					-webkit-font-smoothing: antialiased;
+					-moz-osx-font-smoothing: grayscale;
+					background-color: transparent;
+					pointer-events: auto;
 					display: inline-block;
-					color: white;
-					font-size: 3.5vw;
-					height: 3.5vw;
-					width: 10.7vw;
-					max-width: 11.5vw;
-					// margin-left: 0.26vw;
-					// margin-right: 0.26vw;
-					margin: 0 !important;
-					margin-top: 3.2vh;
-					white-space: nowrap;
+
+					&.playing {
+						border: 0;
+					}
+				}
+
+				.promo_bol,
+				.promo_bol2 {
+					opacity: 0;
+					position: absolute;
+					z-index: 110;
+					background-color: #0077c8;
+					width: 12.2vw;
+					height: 12.2vw;
+					border-radius: 10vw;
+					right: 2.3%;
+					bottom: 8.8%;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					// align-items: center;
+					padding: 1vw;
+					text-align: center;
+
+					.small {
+						font-family: SamsungOne;
+						font-weight: 450C;
+						color: white;
+						font-size: 1.5vw;
+						letter-spacing: 0.2;
+						-webkit-font-smoothing: antialiased;
+						-moz-osx-font-smoothing: grayscale;
+						margin: 0 !important;
+					}
+
+					.big {
+						display: inline-block;
+						color: white;
+						font-size: 3.5vw;
+						height: 3.5vw;
+						width: 10.7vw;
+						max-width: 11.5vw;
+						// margin-left: 0.26vw;
+						// margin-right: 0.26vw;
+						margin: 0 !important;
+						margin-top: 3.2vh;
+						white-space: nowrap;
+						-webkit-font-smoothing: antialiased;
+						-moz-osx-font-smoothing: grayscale;
+					}
+
+					.small_top {
+						margin-top: 5%;
+						margin-bottom: -7%;
+					}
+				}
+
+
+				.testText {
+					position: absolute;
+					transform: translate(-50%, -50%);
+					top: 50%;
+					left: 50%;
+					pointer-events: auto;
+					display: flex;
+					text-align: center;
+					font-size: 4.1vw;
+					font-family: SamsungSharpSans;
+					// text-shadow: 0px 3px 50px rgba(255,255,255,0.9);
+					text-shadow: 0 0 1.5vw rgb(206 206 206 / 60%),
+						0 0 0.5vw rgb(206 206 206 / 75%);
+					overflow-wrap: break-word;
+					width: 55vw;
+					// max-width: 65vw;
+					flex-wrap: wrap;
+					word-break: break-all;
 					-webkit-font-smoothing: antialiased;
 					-moz-osx-font-smoothing: grayscale;
+					background-color: transparent;
+
+					&.playing {
+						border: 0;
+					}
+				}
+			}
+
+			.frame2 {
+				z-index: 25;
+				border: 1px solid red;
+
+				.left,
+				.right {
+					height: 100%;
+					width: 50%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
 				}
 
-				.small_top {
-					margin-top: 5%;
-					margin-bottom: -7%;
+				.left {
+					overflow: hidden;
+					transform: translate(-100%, 0);
+					opacity: 0;
+					img {
+
+						transform: scale(1) !important;
+						object-fit: cover !important;
+						width: 100%;
+						height: 100%;
+					}
+				}
+
+				.right {
+					background-color: white;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					transform: translate(100%, 0);
+					opacity: 0;
+					.visual {
+						display: flex;
+						flex-direction: column;
+						justify-content: space-between;
+						height: 93.4%;
+						width: 90%;
+
+						.product {
+							font-family: SamsungSharpSans;
+							text-align: center;
+							font-size: 4.2vw;
+							margin-top: 4%;
+							-webkit-font-smoothing: antialiased;
+							-moz-osx-font-smoothing: grayscale;
+							text-rendering: optimizeLegibility;
+						}
+
+						.image_container {
+							width: 100%;
+							// height: 100%;
+							height: 56vh;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+
+							.image {
+								position: relative;
+								height: 43vh;
+								width: 33%;
+								margin-right: 7vw;
+								display: flex;
+								justify-content: center;
+								align-items: center;
+
+								img {
+									position: absolute;
+
+								}
+
+								#phone1 {
+									bottom: -0.8vw;
+									right: 3.5vw;
+									z-index: 160;
+									height: 90%;
+									//height: 47.5%;
+								}
+
+								#phone2 {
+									// right: 0;
+									right: 0;
+									height: 90%;
+									z-index: 155;
+								}
+							}
+						}
+
+						.text_container {
+
+							//height: 100%;
+							display: flex;
+							flex-direction: column;
+							justify-content: flex-end;
+
+							.info {
+								margin: 0;
+								margin-bottom: 3%;
+								// margin-top: 3.1vw;
+								font-size: 1vw;
+								font-family: SamsungOne;
+								font-weight: 400;
+								text-align: left;
+								max-width: 90%;
+								overflow-wrap: break-word;
+								-webkit-font-smoothing: antialiased;
+								-moz-osx-font-smoothing: grayscale;
+							}
+
+							.bottom {
+								display: flex;
+								flex-direction: row;
+								justify-content: space-between;
+								align-items: flex-end;
+								.cta_button {
+									opacity: 0;
+									min-width: 30%;
+									max-width: 60%;
+									padding: 2% 1.5%;
+								}
+
+								.samsung {
+									font-size: 1.4vw;
+								}
+							}
+						}
+					}
 				}
 			}
 
-
-			.testText {
-				position: absolute;
-				transform: translate(-50%, -50%);
-				top: 50%;
-				left: 50%;
-				pointer-events: auto;
-				display: flex;
-				text-align: center;
-				font-size: 4.1vw;
-				font-family: SamsungSharpSans;
-				// text-shadow: 0px 3px 50px rgba(255,255,255,0.9);
-				text-shadow: 0 0 1.5vw rgb(206 206 206 / 60%),
-					0 0 0.5vw rgb(206 206 206 / 75%);
-				overflow-wrap: break-word;
-				width: 55vw;
-				// max-width: 65vw;
-				flex-wrap: wrap;
-				word-break: break-all;
-				-webkit-font-smoothing: antialiased;
-				-moz-osx-font-smoothing: grayscale;
-				background-color: transparent;
-
-				&.playing {
-					border: 0;
-				}
-			}
 		}
 	}
 
