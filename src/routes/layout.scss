@@ -6,8 +6,12 @@ body {
 }
 
 .app {
-	background-color: #eee;
+	// background-color: #eee;
+	background-color: red;
+	background: url('/img/asn_pixel_bg2.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 	display: grid;
 	grid-template-columns: 1fr 3fr;
 }
-

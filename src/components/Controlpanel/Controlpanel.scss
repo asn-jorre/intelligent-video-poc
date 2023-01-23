@@ -6,9 +6,12 @@
 	min-height: 100vh;
 	background-color: #160f30;
 	padding: 10px 30px;
+	mix-blend-mode: lighten;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 40px;
+
 	.ASNlogo {
-		// border: 1px solid red;
-		max-width: 15vw;
+		// max-width: 15vw;
 		img {
 			object-fit: contain;
 			width: 100%;
@@ -16,6 +19,7 @@
 		.sub {
 			display: flex;
 			align-items: center;
+			margin-left: 17px;
 			span {
 				width: 3vw;
 				height: 2px;
