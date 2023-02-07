@@ -380,6 +380,61 @@ input {
 		max-width: 100%;
 		width: 100%;
 	}
+
+	#videoControls {
+		display: flex;
+		flex-direction: column;
+		background-color: #ccc;
+
+		#timeline {
+			position: relative;
+			background-color: red;
+			width: 100%;
+			height: 13px;
+			border-radius: 10px;
+
+			#scrubElement {
+				position: absolute;
+				top: 50%;
+				left: 1%;
+				transform: translateY(-50%);
+				height: 20px;
+				width: 20px;
+				background-color: #fff;
+				border-radius: 50%;
+				display: inline-block;
+			}
+		}
+
+		#buttons {
+			// display: flex;
+			// flex-direction: row;
+			padding: 10px;
+
+			#play,
+			#pause {
+				// width: 50px;
+				display: inline-block;
+			}
+
+			#play {
+				width: 30px;
+				height: 30px;
+				background: url(https://cdn-icons-png.flaticon.com/512/149/149125.png) left center no-repeat;
+				vertical-align: middle;
+				background-size: 30px auto;
+			}
+
+			#pause {
+				width: 30px;
+				height: 30px;
+				background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Octicons-playback-pause.svg/1024px-Octicons-playback-pause.svg.png)
+					left center no-repeat;
+				vertical-align: middle;
+				background-size: 30px auto;
+			}
+		}
+	}
 }
 
 .video-js.vjs-playing .vjs-tech {

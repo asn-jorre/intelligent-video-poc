@@ -140,5 +140,17 @@
 		<video src="/flip4_.mp4" kind="captions" id="video" controls>
 			<track kind="captions" />
 		</video>
+		<div id="videoControls">
+			<div id="timeline">
+				<!-- video timeline scrub -->
+				<span id="scrubElement" />
+			</div>
+
+			<div id="buttons">
+				<!-- Play/pause, etc -->
+				<span id="play" />
+				<span id="pause" />
+			</div>
+		</div>
 	</div>
 </div>
